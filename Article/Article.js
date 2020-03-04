@@ -114,26 +114,40 @@ const data = [
 
 */
 
-// Create the elements
-const article = document.createElement("div");
-const title = document.createElement("h2");
-const date = document.createElement("p");
-const firstParagraph = document.createElement("p");
-const secondParagraph = document.createElement("p");
-const thirdParagraph = document.createElement("p");
-const expandButton = document.createElement("span");
+const createArticle = obj => {
+  // Create the elements
+  const article = document.createElement("div");
+  const title = document.createElement("h2");
+  const date = document.createElement("p");
+  const firstParagraph = document.createElement("p");
+  const secondParagraph = document.createElement("p");
+  const thirdParagraph = document.createElement("p");
+  const expandButton = document.createElement("span");
 
-// Assemble elements
-article.append(
-  title,
-  date,
-  firstParagraph,
-  secondParagraph,
-  thirdParagraph,
-  expandButton
-);
+  // Assemble elements
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(firstParagraph);
+  article.appendChild(secondParagraph);
+  article.appendChild(thirdParagraph);
+  article.appendChild(expandButton);
 
-// Add classes
-article.classList.add("article");
-date.classList.add("date");
-expandButton.classList.add("expandButton");
+  // Add classes
+  article.classList.add("article");
+  date.classList.add("date");
+  expandButton.classList.add("expandButton");
+
+  // Fill text content
+  title.textContent = obj.title;
+  date.textContent = obj.date;
+  firstParagraph.textContent = obj.firstParagraph;
+  secondParagraph.textContent = obj.secondParagraph;
+  thirdParagraph.textContent = obj.thirdParagraph;
+
+  return article;
+};
+
+const articles = document.querySelector(".articles");
+data.map(d => {
+  return articles.appendChild(createArticle(d));
+});
