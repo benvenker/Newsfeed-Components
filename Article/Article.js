@@ -143,7 +143,7 @@ const createArticle = obj => {
   firstParagraph.textContent = obj.firstParagraph;
   secondParagraph.textContent = obj.secondParagraph;
   thirdParagraph.textContent = obj.thirdParagraph;
-  expandButton.textContent = "test";
+  expandButton.textContent = "expand";
 
   // const expandButton = document.querySelector("span");
   expandButton.addEventListener("click", e => {
