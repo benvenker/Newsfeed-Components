@@ -122,3 +122,18 @@ const firstParagraph = document.createElement("p");
 const secondParagraph = document.createElement("p");
 const thirdParagraph = document.createElement("p");
 const expandButton = document.createElement("span");
+
+// Assemble elements
+article.append(
+  title,
+  date,
+  firstParagraph,
+  secondParagraph,
+  thirdParagraph,
+  expandButton
+);
+
+// Add classes
+article.classList.add("article");
+date.classList.add("date");
+expandButton.classList.add("expandButton");
