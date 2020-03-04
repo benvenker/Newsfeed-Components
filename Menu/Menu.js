@@ -67,7 +67,9 @@ const createMenu = arr => {
   const menuButton = document.querySelector(".menu-button");
 
   menuButton.addEventListener("click", () => {
-    menuButton.classList.toggle("menu--open");
+    menu.classList.toggle("menu--open");
+    // menu.classList.toggle("menu--open");
+
     console.log("clicked");
   });
 
