@@ -148,7 +148,6 @@ const createArticle = obj => {
   // const expandButton = document.querySelector("span");
   expandButton.addEventListener("click", e => {
     article.classList.toggle("article-open");
-    console.log("clicked", e.target);
   });
 
   return article;
