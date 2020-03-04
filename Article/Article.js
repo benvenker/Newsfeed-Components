@@ -143,6 +143,13 @@ const createArticle = obj => {
   firstParagraph.textContent = obj.firstParagraph;
   secondParagraph.textContent = obj.secondParagraph;
   thirdParagraph.textContent = obj.thirdParagraph;
+  expandButton.textContent = "test";
+
+  // const expandButton = document.querySelector("span");
+  expandButton.addEventListener("click", e => {
+    article.classList.toggle("article-open");
+    console.log("clicked", e.target);
+  });
 
   return article;
 };
