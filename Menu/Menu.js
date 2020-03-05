@@ -40,10 +40,11 @@ const createMenu = arr => {
 
   // Create elements
   const menu = document.createElement("div");
+  const list = document.createElement("ul");
+
+  // Assemble Elements
   menu.classList.add("menu");
   header.appendChild(menu);
-
-  const list = document.createElement("ul");
 
   for (let i = 0; i < arr.length; i++) {
     // create an item for each one
@@ -58,10 +59,6 @@ const createMenu = arr => {
   }
 
   menu.appendChild(list);
-
-  // header.appendChild(menu);
-
-  // Add classes
 
   // select menu button
   const menuButton = document.querySelector(".menu-button");
@@ -79,5 +76,3 @@ const createMenu = arr => {
 const header = document.querySelector(".header");
 
 createMenu(menuItems);
-//   header.appendChild(createMenu(item));
-// });
